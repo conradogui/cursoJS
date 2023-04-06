@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="nume">Seu numero é</h1>
+    <script>
+        let perg = prompt('Digite um numero')
+        let num1 = Number(perg)
+        let cabe = document.getElementById('nume')
+        nume.innerHTML = ` O seu numero é ${num1}`
+        document.body.innerHTML += `<p>A raiz quadrada do seu numero é ${num1 ** 0.5}</p>`
+        document.body.innerHTML += `<p>${num1} é inteiro: ${Number.isInteger(num1)}</p>` // retorna true ou false bo final
+        document.body.innerHTML += `<p>${num1} é NaN: ${Number.isNaN(num1)}</p>` // retorna true ou false no final
+        document.body.innerHTML += `<p>Arredondando para baixo fica ${Math.floor(num1)}</p>`
+        document.body.innerHTML += `<p>Arredondando para cima fica ${Math.ceil(num1)}</p>`
+        document.body.innerHTML += `<p>Com duas casas decimais fica ${num1.toFixed(2)}</p>`
+
+    </script>
+</body>
+</html>

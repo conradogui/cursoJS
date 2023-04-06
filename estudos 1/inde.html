@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let nome = prompt('Digite seu nome completo em letras minusculas!')
+        document.body.innerHTML = `<p>Seu nome é ${nome}</p>`
+        document.body.innerHTML += `<p>Seu nome tem ${nome.length} letras</p>`
+        document.body.innerHTML += `<p>A segunda letra do seu nome é ${nome.charAt(1)}</p>`
+        document.body.innerHTML += `<p>O primeiro indice da letra c do seu nome é ${nome.indexOf('c')}</p>`
+        document.body.innerHTML += `<p>O ultimo indice da letra O do seu nome é ${nome.lastIndexOf('o')}</p>`
+        document.body.innerHTML += `<p>As ultimas 3 letras do seu nome são ${nome.slice(-3)}</p>`
+        document.body.innerHTML += `<p>As palavras do seu nome são <strong>${nome.slice(' ')}</strong></p>`
+        document.body.innerHTML += `<p>Seu nome com letas maiusculas: ${nome.toUpperCase()}</p>`
+        document.body.innerHTML += `<p>Seu nome com letras minusculas: ${nome.toLowerCase()}</p>`
+    </script>
+</body>
+</html>
