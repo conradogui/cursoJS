@@ -3,10 +3,10 @@ const iniciar = document.querySelector('.iniciar')
 const zerar = document.querySelector('.zerar')
 const pausar = document.querySelector('.pausar')
 let segundos = 0 //marco zero para fazer a contagem e oque mantém todas funções dos eventos
-let timer
+let timer //defini ela sem nada para poder definir em qualquer função globlamente
 
 function horaZero(segundos) { //o que eu vou contar é os segundos, logo fiz essa função para conseguir o formato de hora
-    let hora = new Date(segundos * 1000) //multipliquei por 1000 pois o JS recebe em milésimos de segundo, multiplicando por 1000 vou ter o valor em segundos
+    let hora = new Date(segundos * 1000) //multipliquei por 1000 pois *o JS recebe em milésimos de segundo*, multiplicando por 1000 vou ter o valor em segundos
     return hora.toLocaleTimeString('pt-BR', {
         hour12:false,
         timeZone:'UTC' //para tirar o 21 da frente e especificar que a data é 01-01-1970 ás 00:00 e os segundos que mandei
