@@ -1,5 +1,5 @@
 const para = document.querySelector('.paragrafos')
-const ps = para.querySelectorAll('p')
+const ps = para.querySelectorAll('p') //selecionei todos com a tag p
 
 const estilos = getComputedStyle(document.body)
 const bckgcb = estilos.backgroundColor

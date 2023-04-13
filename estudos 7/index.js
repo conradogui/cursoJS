@@ -1,6 +1,6 @@
 const data = new Date()
 let diaSemana = data.getDay()
-diaSemana = 7
+diaSemana = 4
 let diaDaSemanaTexto
 
 switch (diaSemana) {
@@ -29,4 +29,4 @@ switch (diaSemana) {
         diaDaSemanaTexto = ''
         break;
 }
-console.log(diaSemana , diaDaSemanaTexto)
+console.log(diaSemana, diaDaSemanaTexto)

@@ -6,7 +6,7 @@ function soma(x,y){
 }
 try {
     console.log(soma(1, 2))
-    console.log('1', 2)
+    console.log(soma('1', 2))
 } catch(err) {
     //console.log(err)
     console.log('something more friendly to user')

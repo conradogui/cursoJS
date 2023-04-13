@@ -6,3 +6,4 @@ let removido = alunos.pop() //ele tira um elemento do final do array
 console.log(removido) //posso pegar o que foi removido e guardar ele como um dado
 alunos.shift()//remove do inicio do array
 delete alunos[1] //posso tirar um elemento 
+console.log(alunos)

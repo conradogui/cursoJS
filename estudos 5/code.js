@@ -4,7 +4,7 @@ function meuEscopo() {
     const pessoas = [] //o que vai preencher esse array é o que vou enviar
 
     function recebeEventoForm (evento) {
-        evento.preventDefault() // previne o que era pra acontecer por padrão
+        evento.preventDefault() // previne o que era pra acontecer por padrão (envio do formulário e atualização da página)
 
         const nome = form.querySelector('.txt1') //selecionei com form ao inves de document pois sei que o que eu quero está dentro do form
         const sobrenome = form.querySelector('.txt2') //selecionei com form ao inves de document pois sei que o que eu quero está dentro do form
