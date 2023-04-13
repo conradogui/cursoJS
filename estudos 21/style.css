@@ -63,3 +63,9 @@ footer {
 .red {
     background-color: rgb(235, 66, 66);
 }
+.relogio {
+    font-size: 2em;
+}
+.pausado {
+    color: red;
+}
