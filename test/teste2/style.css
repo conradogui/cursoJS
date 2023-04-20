@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family= Ubuntu & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image:url(back.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.438);
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    width: 450px;
+    margin: auto;
+    border: 3px solid black;
+    margin-top: 20px;
+    border-radius: 20px;    
+
+}
+h1 {
+    font-family: 'DynaPuff', cursive;
+    font-size: 3em;
+    font-weight: 900;
+    text-shadow: 1px 3px 10px black;
+    color: antiquewhite;
+}
+header {
+    margin-left: 10px;
+}
+header > p {
+    font-size: large;
+    font-weight: 600;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 3px 8px black;    
+}
+.joga1, .joga2 {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: larger;
+    text-shadow: 1px 8px 8px black;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    
+}
+.joga1:focus, .joga2:focus {
+    box-shadow: 0;
+    outline: 0;
+}
+.comecar {  
+    width: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.comecar:hover {
+    background-color: rgb(13, 22, 67);
+    color: white;
+    transition: 0.5s;
+    width: 150px;
+    height: 50px;
+}
+.vez {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 3px 8px black;
+}
+.btn {
+    background-color: transparent;
+    border: none;
+    font-size: 5em;
+    font-weight: bold;
+}
+table {
+    border-collapse: collapse;
+    margin: auto;
+    background-color: rgba(245, 245, 220, 0.285);
+    border-radius: 10px;
+    min-width: 60%;
+
+    
+
+}
+td {
+    border-collapse: collapse;
+    
+}
+.v1 {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.v2 {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+.v3 {
+    border-bottom: 2px solid black;
+}
+.v4 {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.v5 {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+.v6 {
+    border-bottom: 2px solid black;
+}
+.v7 {
+    border-right: 2px solid black;
+}
+.v8 {
+    border-right: 2px solid black;
+}
