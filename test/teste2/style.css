@@ -9,13 +9,15 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
+    position: relative;
+    
 }
 .container {
     background-color: rgba(0, 0, 0, 0.438);
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
-    width: 450px;
+    max-width: 350px;
     margin: auto;
     border: 3px solid black;
     margin-top: 20px;
@@ -56,8 +58,9 @@ header > p {
 }
 .comecar {  
     width: 100px;
+    height: 30px;
     border-radius: 20px;
-    cursor: pointer;
+    cursor:grab;
     font-weight: bold;
 }
 .comecar:hover {
@@ -79,46 +82,62 @@ header > p {
     border: none;
     font-size: 5em;
     font-weight: bold;
+    cursor:grab;
 }
 table {
     border-collapse: collapse;
     margin: auto;
     background-color: rgba(245, 245, 220, 0.285);
     border-radius: 10px;
-    min-width: 60%;
-
-    
+    min-width: 50px;
+        
 
 }
-td {
+tr {
     border-collapse: collapse;
     
 }
 .v1 {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
+    min-width: 100px;
 }
 .v2 {
     border-bottom: 2px solid black;
     border-right: 2px solid black;
+    min-width: 100px;
 }
 .v3 {
     border-bottom: 2px solid black;
+    min-width: 100px;
 }
 .v4 {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
+    min-width: 100px;
 }
 .v5 {
     border-bottom: 2px solid black;
     border-right: 2px solid black;
+    min-width: 100px;
 }
 .v6 {
     border-bottom: 2px solid black;
+    min-width: 100px;
 }
 .v7 {
     border-right: 2px solid black;
+    min-width: 100px;
 }
 .v8 {
     border-right: 2px solid black;
+    min-width: 100px;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: aliceblue;
+    font-family: 'Ubuntu', sans-serif;
 }

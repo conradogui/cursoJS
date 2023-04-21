@@ -37,6 +37,7 @@ function timer() {
         vez.innerHTML = `Vez de ${primeiro[0]}` 
     }
     }, 1000)
+    contagemRegressiva = 4
 }
 
 //realizando o jogo (X e O) e mudando a vez
