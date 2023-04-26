@@ -14,7 +14,7 @@ function funcaoDois(a, b = 0, c = 0) {
 }
 funcaoDois(2) //se os outros valores não forem enviados quando chamo a função, ele assume os valores de quando declarei ela, que no caso b e c são 0
 
-function conta (operador, acumulador, ...numeros) { //uso o 'resto' (...) para definir que numeros é todo o resto. Ele sempre tem que ser o ultn imo
+function conta (operador, acumulador, ...numeros) { //uso o 'resto' (...) para definir que numeros é todo o resto. Ele sempre tem que ser o ultimo
     for(let numero of numeros) {
         acumulador += numero
     }
