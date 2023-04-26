@@ -1,3 +1,4 @@
+//constructor functions
 class Pessoa {
     constructor(nome, sobrenome) {
         //esses sao atributos privados pois são ultilizados somente dentro da constructor function

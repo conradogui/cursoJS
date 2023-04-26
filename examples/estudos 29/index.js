@@ -5,8 +5,8 @@ const nomes = ['joao', 'maria', 'guilherme', 'carlos']
 //const removidos = nomes.splice(-2, 1) --> [ 'joao', 'maria', 'carlos' ] [ 'guilherme' ]
 //const removidos = nomes.splice(-2, Number.MAX_VALUE) --> [ 'joao', 'maria' ] [ 'guilherme', 'carlos' ]
 //posso ultilizar o Number.MAX_VALUE para representar a quantidade maxima de itens que irei remover
-const removidos = nomes.splice(2, 0, 'Jamaica')
+const removidos = nomes.splice(2, 1, 'Jamaica')
 //caso eu colocasse 1 ao inves de 0 no exemplo acima, eu iria remover um item (no caso 'guilherme') e adicionaria Jamaica
-console.log(nomes, removidos)// [ 'joao', 'maria', 'Jamaica', 'guilherme', 'carlos' ] [] --> não foi removido nada e no indice 2 adicionei Jamaica
+console.log(nomes, removidos)// [ 'joao', 'maria', 'Jamaica', 'carlos' ] ['guilherme'] --> não foi removido nada e no indice 2 adicionei Jamaica
 
 
