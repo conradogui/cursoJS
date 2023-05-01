@@ -21,7 +21,7 @@ const p2 = {
 }
 Object.setPrototypeOf(p2, Produto.prototype)
 
-//criei o objeto, defini quem vai ser o prototype(pai) dele e configurei as chaves as chaves 
+//criei o objeto, defini quem vai ser o prototype(pai) dele e configurei as chaves 
 const p3 = Object.create(Produto.prototype, { 
     preco: {
         writable:true ,

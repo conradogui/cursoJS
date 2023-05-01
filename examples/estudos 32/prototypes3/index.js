@@ -9,7 +9,7 @@ Produto.prototype.desconto = function(quantia) {
     this.preco -= quantia
 }
 function Camiseta(nome, preco, cor) {
-    Produto.call(this, nome, preco)//com isso eu consigo lincar as duas funções
+    Produto.call(this, nome, preco)//com isso eu consigo lincar as duas funções(camiseta com produto)
     this.cor = cor
 }
 function Caneca(nome, preco, material) {
