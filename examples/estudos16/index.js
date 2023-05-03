@@ -1,3 +1,4 @@
+//para retornar o maior
 function max(x, y) {
     if(x > y)
     return x
