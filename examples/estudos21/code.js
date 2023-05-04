@@ -13,7 +13,7 @@ function horaZero(segundos) { //o que eu vou contar é os segundos, logo fiz ess
     }) 
 }
 function iniciaRelogio() {
-    timer = setInterval( function() {
+    timer = setInterval( function() { //o setInterval repetem chamadas de funções ou executam trechos de código, com um tempo de espera fixo entre cada chamada, no caso, a cada 1000ms(1seg)
     segundos++ //soma um segundo a cada segundo
     relogio.innerHTML = horaZero(segundos) //a cada momento que eu chamar a função, ela vai formatar em formato de horário
 }, 1000)

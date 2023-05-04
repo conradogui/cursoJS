@@ -18,7 +18,7 @@ function limpaInput() {
     inputTarefa.focus()
 }
 function criaBotaoApagar(li) {
-    li.innerHTML += ' '
+    li.innerHTML += ' ' //para dar o espaço entre o botão e a lista
     const botaoApagar = document.createElement('button')
     botaoApagar.innerHTML = 'Apagar'
     //botaoApagar.classList.add('apagar')
