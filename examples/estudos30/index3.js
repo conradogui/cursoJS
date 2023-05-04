@@ -6,7 +6,7 @@ const total = numeros.reduce(function(acumulador, valor) {
         //console.log(acumulador)
     }
     return acumulador
-}, 0)//esse zero é o valor inicial
+}, 0)//esse zero é o valor inicial do acumulador
 console.log(total) //162
 
 

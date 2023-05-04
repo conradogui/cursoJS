@@ -10,7 +10,7 @@ class Pessoa {
         this.nome = nome
         this.sobrenome = sobrenome
         this.metodo = () => {
-            console.log(`${this.nome} é um método`)
+            return (`${this.nome} é um método`)
         }
     }
 }

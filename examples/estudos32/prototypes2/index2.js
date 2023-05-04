@@ -19,7 +19,7 @@ const p2 = {
     nome: 'Caneco',
     preco: 15
 }
-Object.setPrototypeOf(p2, Produto.prototype)
+Object.setPrototypeOf(p2, Produto.prototype)//faço com que o p2 tenha o mesmo prototype de Produto
 
 //criei o objeto, defini quem vai ser o prototype(pai) dele e configurei as chaves 
 const p3 = Object.create(Produto.prototype, { 
