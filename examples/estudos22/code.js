@@ -26,7 +26,7 @@ function criaBotaoApagar(li) {
     li.appendChild(botaoApagar)
 }
 
-function criaTarefa(textoInput) {
+function criaTarefa(textoInput) { //!!!
     const li = criaLi()
     li.innerHTML = textoInput
     tarefas.appendChild(li)  
