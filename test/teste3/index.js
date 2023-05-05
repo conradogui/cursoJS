@@ -1,9 +1,14 @@
-const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27] 
-const numersFiltro = numeros.filter(val => val > 11)
-console.log(numersFiltro)
-
-const numeros2 = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27] 
-const numis = numeros2.map(val => val * 2)
-console.log(numis)
-
-const numeros3 = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27] 
+function Produto(nome, preco) {
+    this.nome = nome
+    this.preco = preco
+}
+Produto.prototype.desconto = function(percentual) {
+    this.preco = this.preco - (this.preco * (percentual/100))
+}
+Produto.prototype.aumento = function(percentual) {
+    this.preco = this.preco + (this.preco * (percentual/100))
+}
+const p1 = new Produto('Camiseta', 20)
+p1.aumento(20)
+p1.desconto(50)
+console.log(p1)
