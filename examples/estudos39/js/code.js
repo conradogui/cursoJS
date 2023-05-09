@@ -43,7 +43,7 @@ class ValidaFormulario {
         }
         
         for(let campo of this.formulario.querySelectorAll('.validar')) {
-            const label = campo.previousElementSibling.innerHTML
+            const label = campo.previousElementSibling.innerHTML // o previousElementSibling retorna o elemento imediatamente anterior na lista de filhos de seu pai
             
             if(!campo.value) {
                 this.criaErro(campo, `Campo "${label}" não pode estar vazio`)
@@ -67,7 +67,7 @@ class ValidaFormulario {
             this.criaErro(campo, 'Usuario precisa ter entre 3 e 12 caracteres')
             valid = false
         }
-        if(!usuario.match(/^[a-zA-Z0-9]+$/g)) { //expressão regular
+        if(!usuario.match(/^[a-zA-Z0-9]+$/g)) { //expressão regular (essa expressão checa se o usuario so possui letras(maiusculas e/ou minusculas) ou numeros)
             this.criaErro(campo, 'Nome de usuario precisa conter letras e/ou numeros')
             valid = false
         }
@@ -86,7 +86,7 @@ class ValidaFormulario {
         const div = document.createElement('div')
         div.innerHTML = msg
         div.classList.add('error-text')
-        campo.insertAdjacentElement('afterend', div)
+        campo.insertAdjacentElement('afterend', div)// o insertAdjacentElement insere um determinado nó de elemento em uma determinada posição relativa ao elemento sobre o qual é invocado. (insertAdjacentElement(position, element))
 
     }
 }
