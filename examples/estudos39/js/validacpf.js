@@ -2,7 +2,7 @@ class ValidaCPF {
     constructor (cpfEnviado) {
         Object.defineProperty(this, 'cpfLimpo', {
             enumerable: true,
-            value: cpfEnviado.replace(/\D+/g, '')
+            value: cpfEnviado.replace(/\D+/g, '') //expressão regular para retirar tudo que não é numero
         })
     }
     valida () {
@@ -20,7 +20,7 @@ class ValidaCPF {
         const cpfParcial = this.cpfLimpo.slice(0, -2)
         const digito1 = this.geraDigito(cpfParcial)
         const digito2 = this.geraDigito(cpfParcial + digito1)
-        this.novoCPF = cpfParcial + digito1 + digito2
+        this.novoCPF = cpfParcial + digito1 + digito2 //aqui não estou somando e sim concatenando, pois digito 1 e digito 2 sao strings
     }
     geraDigito(cpfParcial) {
         let total = 0
