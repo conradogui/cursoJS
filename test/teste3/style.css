@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(190, 145, 233);
+}
+.container {
+    border: 3px dashed black;
+    width: 500px;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.233);
+}
+.formulario {
+    display: grid;
+}
+.validar {
+    margin-bottom: 10px;
+}
+input {
+    width: 300px;
+    margin-left: 20px;
+    height: 25px;
+    font-size: 1.5em;
+}
+label {
+    margin-left: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button {
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: rgb(50, 3, 95);
+    color: white;
+    cursor: pointer;
+}

@@ -26,7 +26,7 @@ class ValidaCPF {
         let total = 0
         let reverso = cpfParcial.length + 1
 
-        for(let numeros of cpfParcial) {    
+        for(let numeros of cpfParcial) {
             total += reverso * Number(numeros)
             reverso--           
         }
