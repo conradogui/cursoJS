@@ -37,11 +37,11 @@ class ValidaCpf {
 }
 
 
-const cpf = new ValidaCpf('070.987.720-03')
-// console.log(cpf)
+// const cpf = new ValidaCpf('070.987.720-03')
+// // console.log(cpf)
 
-if(cpf.valida()) {
-    console.log( 'CPF válido')
-} else {
-    console.log( 'CPF inválido')
-}
+// if(cpf.valida()) {
+//     console.log( 'CPF válido')
+// } else {
+//     console.log( 'CPF inválido')
+// }

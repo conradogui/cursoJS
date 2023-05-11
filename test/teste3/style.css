@@ -39,3 +39,8 @@ button {
     color: white;
     cursor: pointer;
 }
+.error-text {
+    margin-left: 20px;
+    font-size: 20px;
+    color: rgb(185, 6, 6);
+}
