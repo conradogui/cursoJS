@@ -1,8 +1,8 @@
 
 //Promises
 function rand(min, max) {
-    max *= 1000
-    min *= 1000
+    min *= 1000//para voltar em segundo
+    max *= 1000//para voltar em segundo
     return Math.floor(Math.random() * (max - min) +min)
 }
 function esperaAi(msg, tmp) {
@@ -19,7 +19,7 @@ esperaAi('Conexão com BD', rand(1, 3)).then(resposta => {
 })
 .then(resposta => {
     console.log(resposta)
-    return esperaAi( 22222 , rand(1, 3))
+    return esperaAi( 'Achei os dados' , rand(1, 3))
 })
 .then(resposta => {
     console.log(resposta)
