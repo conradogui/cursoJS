@@ -1,14 +1,14 @@
 const request = obj => {
     return new Promise((resolve, reject) => {
-        const xhr = new XMLHttpRequest() // chamo o construtor dele para emitir solicitações HTTP para trocar dados entre o site e um servidor
-        xhr.open(obj.method, obj.url, true) 
-        xhr.send()
+        const xhr = new XMLHttpRequest() // chamo o construtor dele para emitir solicitações HTTP para trocar dados entre o site e o servidor
+        xhr.open(obj.method, obj.url, true)//ultilizo o open para inicializa-lo antes de chamar
+        xhr.send()//ultilizo o send para enviar solicitação ao servidor
     
         xhr.addEventListener('load', () => {
             if(xhr.status >= 200 && xhr.status < 300) { //o status é o status do XMLHttpRequest que vai de 100 a 500
-                resolve(xhr.responseText) //o que eu buscar de um documento html, JSON ou qualquer coisa vai para minha função success
+                resolve(xhr.responseText) //o que eu buscar de um documento html, JSON ou qualquer coisa vai para essa função // nesse caso irá voltar o responseText(propriedade somente leitura retorna o texto recebido de um servidor após o envio de uma solicitação)
             } else {
-                reject(xhr.statusText)//ao contrario de success eu mando o erro e escrevo o status do erro
+                reject(xhr.statusText)//ao contrario de success eu mando o erro (reject) e escrevo o status do erro (dentro do reject)
             }
         })
     })
@@ -43,3 +43,10 @@ function carregaResultado(response){
     const resultado = document.querySelector('.resultado')
     resultado.innerHTML = response
 }
+
+/*
+O objeto XMLHttpRequest permite que as requisições HTTP sejam feitas via browser, permite a comunicação assííncrona com o servidor, 
+através de script (JavaScript), sem que seja iniciada uma nova janela , não tendo a necessidade de atualização da página, sendo possível 
+criar páginas mais interativas.
+
+*/
