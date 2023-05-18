@@ -1,7 +1,7 @@
 function rand(min, max) {
     max *= 1000
     min *= 1000
-    return Math.floor(Math.random() * (max - min) +min)
+    return Math.floor(Math.random() * (max - min) + min)
 }
 function esperaAi(msg, tmp) {
     return new Promise((resolve, reject) => { 
@@ -20,7 +20,7 @@ function baixaPagina() {
     const emCache = true //se for true ele retorna 'Pagina em cache', se for false reetorna 'Baixei a página'e demora 3 seg para aparecer
 
     if(emCache) {
-        return Promise.resolve('Pagina em cache')
+        return Promise.resolve('Pagina em cache') //no resolve ele cai no then, no reject el cai direto no catch (ou seja essas funções retornam promessas resolvidas(resolve) ou promessas rejeitadas(reject))
     } else {
         return esperaAi('Baixei a página', 3000)
     }
@@ -49,7 +49,7 @@ baixaPagina()
 // })
 
 
-// Promise.race(promises) //me retorna o primeiro valor que deu certo
+// Promise.race(promises) //me retorna o primeiro valor que resolver (se cair no erro ele me entrega o erro mesmo)
 // .then(valor => {
 //     console.log(valor)
 // })
