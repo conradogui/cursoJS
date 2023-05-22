@@ -2,7 +2,7 @@
 function rand(min=0, max=3) {
     min *= 1000
     max *= 1000
-    return Math.floor(Math.random() * (max - min) +min)
+    return Math.floor(Math.random() * (max - min) + min)
 }
 function esperaAi(msg, tmp) {
     return new Promise((resolve, reject) => { 
@@ -16,6 +16,7 @@ function esperaAi(msg, tmp) {
         }, tmp)
     })
 }
+
 async function executa() {
     try {
         const fase1 = await esperaAi('Fase 1', rand())

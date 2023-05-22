@@ -1,31 +1,33 @@
-function rand(min, max) {
-    min *= 1000//para voltar em segundo
-    max *= 1000//para voltar em segundo
-    return Math.floor(Math.random() * (max - min) +min)
+function rand(min=1, max=3) {
+    max *= 1000
+    min *= 1000
+    return Math.floor(Math.random() * (max - min) + min)
 }
-function esperaAi(msg, tmp) {
-    return new Promise((resolve, reject) => { //resolve e reject são funções que vão ser chamadas dentro de promise(resolve:codigo executou com sucesso, então resolve ele. reject:deu um erro ent rejeita isso)
-        if(typeof msg !== 'string') reject('Bad value') 
+
+function espera(msg, tmp) {
+    return new Promise((resolve, reject) => {
+        if(typeof msg !== 'string') reject('Erro aqui')
         setTimeout(() => {
-            resolve(msg) //aqui so posso mandar apenas um parametro
+            resolve(msg)
         }, tmp)
     })
 }
-esperaAi('Conexão com BD', rand(1, 3)).then(resposta => {
-    console.log(resposta)
-    return esperaAi('Buscando dados da BASE', rand(1, 3))
-})
-.then(resposta => {
-    console.log(resposta)
-    return esperaAi( 'Achei os dados' , rand(1, 3))
-})
-.then(resposta => {
-    console.log(resposta)
-    return esperaAi('Processando os dados', rand(1, 3))
-})
-.then(resposta => {
-    console.log(resposta)
-})
-.catch( e => {
-    console.log('erro', e)
-})
+
+async function faz() {
+    try {
+        const faz1 = await espera('Primeira mensagem', rand())
+        console.log(faz1)
+
+        const faz2 = await espera('Segunda mensagem da promessa', rand())
+        console.log(faz2)
+
+        const faz3 = await espera('Terceira mensagem', rand())
+        console.log(faz3)
+
+        const faz4 = await espera('Mensagem final', rand())
+        console.log(faz4)
+    } catch(e) {
+        console.log(e)
+    }
+}
+faz()
