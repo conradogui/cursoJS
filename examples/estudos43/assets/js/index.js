@@ -25,15 +25,15 @@ document.addEventListener('click', e => {
 })
 
 async function carregaPagina(el) {
-    try {
+    try { //usei try e catch para tratar o erro
        const href = el.getAttribute('href')
-    const response = await fetch(href)
+       const response = await fetch(href) //fetch retorna uma promise
 
     if(response.status !== 200) throw new Error('ERRO 404!')
 
-    const html = await response.text()
-    carregaResultado(html)  
-    } catch (e) {
+    const html = await response.text() //converte a response (await fetch(href)) em texto
+    carregaResultado(html)// e joga dentro da div  
+    } catch (e) { //usei try e catch para tratar o erro
         console.log(e)
     }
        

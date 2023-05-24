@@ -17,7 +17,7 @@ function esperaAi(msg, tmp) {
     })
 }
 
-async function executa() {
+async function executa() { //async define uma função assíncrona que retorna um objeto
     try {
         const fase1 = await esperaAi('Fase 1', rand())
         console.log(fase1)

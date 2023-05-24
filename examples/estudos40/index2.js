@@ -20,7 +20,7 @@ function baixaPagina() {
     const emCache = true //se for true ele retorna 'Pagina em cache', se for false reetorna 'Baixei a página'e demora 3 seg para aparecer
 
     if(emCache) {
-        return Promise.resolve('Pagina em cache') //no resolve ele cai no then, no reject el cai direto no catch (ou seja essas funções retornam promessas resolvidas(resolve) ou promessas rejeitadas(reject))
+        return Promise.resolve('Pagina em cache') //no resolve ele cai no then, no reject ele cai direto no catch (ou seja essas funções retornam promessas resolvidas(resolve) ou promessas rejeitadas(reject))
     } else {
         return esperaAi('Baixei a página', 3000)
     }

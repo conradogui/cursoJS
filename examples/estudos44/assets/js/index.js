@@ -1,13 +1,13 @@
-fetch('pessoas.json')
-    .then(resposta => resposta.json())
-    .then(json => carregaElementosNaPagina(json))
+// fetch('pessoas.json')
+//     .then(resposta => resposta.json())//aqui ele é convertido em um objeto em javascript
+//     .then(json => carregaElementosNaPagina(json))
 
-// axios('pessoas.json') //axios é mais simples
-//     .then(resposta => carregaElementosNaPagina(resposta.data))
+axios('pessoas.json') //axios é mais simples
+    .then(resposta => carregaElementosNaPagina(resposta.data))//ja manda direto nesse local//resposta.data são os dados
 
 function carregaElementosNaPagina(json) {
     const table = document.createElement('table')
-    for(let pessoa of json) {
+    for(let pessoa of json) {//retorna uma pessoa a cada laço
         const tr = document.createElement('tr')
 
         let td1 = document.createElement('td')
