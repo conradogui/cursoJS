@@ -1,7 +1,6 @@
 //capturando evento de click e colocando a imagem na div
 export default document.addEventListener('click', (e) => {
     const elementoClicado = e.target
-
     
 
     const pedrai = document.querySelector('.pedraimg')
@@ -10,7 +9,8 @@ export default document.addEventListener('click', (e) => {
     const divi = document.querySelector('.resultado')
 
     if(elementoClicado === pedrai) {
-        divi.appendChild(elementoClicado)        
+        divi.appendChild(elementoClicado) 
+        comput()     
     }  
     if(elementoClicado === papeli) {
         divi.appendChild(elementoClicado)        
@@ -20,5 +20,14 @@ export default document.addEventListener('click', (e) => {
     } 
     
 })
+
+const rand = (max, min) => Math.floor(Math.random() * (max - min) + min)
+
+function comput () {
+    const objetos = document.querySelector('.objetos')
+    for(let i = 0; i.length; i++) {
+        i = objetos.rand(0, 3)
+    }
+}
 
 
