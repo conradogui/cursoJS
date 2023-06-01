@@ -1,3 +1,4 @@
+//faz como se fosse a parte front-end, que coloca tudo na forma visual
 import geraSenha from "./geradores";
 
 const senhaGerada = document.querySelector('.senha-gerada')

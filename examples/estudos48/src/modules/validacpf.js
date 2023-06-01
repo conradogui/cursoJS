@@ -1,4 +1,5 @@
-export default class ValidaCPF {
+//aqui eu facço a validação do cpf
+export default class ValidaCPF { //realizei a exportação da class principal (o resto ta tudo dentro dela)
     constructor (cpfEnviado) {
         Object.defineProperty(this, 'cpfLimpo', {
             enumerable: true,
@@ -34,4 +35,4 @@ export default class ValidaCPF {
         return digito <= 9 ? String(digito) : '0'
     }
 }
-console.log('cheguei aqui')
+

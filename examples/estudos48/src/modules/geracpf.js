@@ -1,4 +1,4 @@
-import validaCPF from "./validacpf";
+import validaCPF from "./validacpf"; //importo a class principal para gerar um novo cpf
 
 export default class GeraCPF {
     rand(min = 100000000, max = 999999999) {
