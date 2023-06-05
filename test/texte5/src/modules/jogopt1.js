@@ -1,5 +1,5 @@
+import parag from "./criadorp";
 
-//capturando evento de click e colocando a imagem na div
 document.addEventListener('click', (e) => {
     const elementoClicado = e.target
     
@@ -8,6 +8,7 @@ document.addEventListener('click', (e) => {
     const papeli = document.querySelector('.pepelimg')
     const tesourai = document.querySelector('.tesouraimg')
     const divi = document.querySelector('.resultado')
+    const divi1 = document.querySelector('.comput')
     const divi2 = document.querySelector('.ganhou-perdeu')
 
     if(elementoClicado === pedrai) {
@@ -23,8 +24,8 @@ document.addEventListener('click', (e) => {
     if (elementoClicado === pedrai) {
         const elementos = [papeli, tesourai]
         const elementoAleatorio = elementos[Math.floor(Math.random() * elementos.length)]
-        divi.appendChild(elementoAleatorio)
-        const p = divi2.appendChild(criaP())
+        divi1.appendChild(elementoAleatorio)
+        const p = divi2.appendChild(parag())
         if(elementoAleatorio === papeli) {
             p.innerHTML += 'Você perdeu, papel cobre a pedra!'
         } else {
@@ -34,8 +35,8 @@ document.addEventListener('click', (e) => {
     if (elementoClicado === papeli) {
         const elementos = [pedrai, tesourai]
         const elementoAleatorio = elementos[Math.floor(Math.random() * elementos.length)]
-        divi.appendChild(elementoAleatorio)
-        const p = divi2.appendChild(criaP())
+        divi1.appendChild(elementoAleatorio)
+        const p = divi2.appendChild(parag())
         if(elementoAleatorio === tesourai) {
             p.innerHTML += 'Você perdeu, tesoura corta papel!'
         } else {
@@ -45,8 +46,8 @@ document.addEventListener('click', (e) => {
     if (elementoClicado === tesourai) {
         const elementos = [papeli, pedrai]
         const elementoAleatorio = elementos[Math.floor(Math.random() * elementos.length)]
-        divi.appendChild(elementoAleatorio)
-        const p = divi2.appendChild(criaP())
+        divi1.appendChild(elementoAleatorio)
+        const p = divi2.appendChild(parag())
         if(elementoAleatorio === pedrai) {
             p.innerHTML += 'Você perdeu, pedra destroi tesoura!'
         } else {
@@ -55,10 +56,8 @@ document.addEventListener('click', (e) => {
     }
 })
 
-function criaP() {
-    const p = document.createElement('p')
-    return p
-}
+
+
 
 
 
