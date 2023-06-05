@@ -5,6 +5,12 @@ body {
 }
 h1 {
     text-align: center;
+    background-color: rgb(8, 247, 0);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .objetos {
     display: flex;
@@ -15,14 +21,21 @@ h1 {
 .tesoura {
     background-color: darkgrey;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    max-width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     cursor: pointer;
 }
 .resultado {
-    height: 50vh;
+    margin-top: 50px;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+}
+.ganhou-perdeu > p {
+    color: rgb(247, 247, 247);
     display: flex;
     justify-content: center;
+    font-size: 3em;
 }

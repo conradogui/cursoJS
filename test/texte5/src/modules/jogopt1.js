@@ -1,5 +1,6 @@
+
 //capturando evento de click e colocando a imagem na div
-export default document.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
     const elementoClicado = e.target
     
 
@@ -7,10 +8,10 @@ export default document.addEventListener('click', (e) => {
     const papeli = document.querySelector('.pepelimg')
     const tesourai = document.querySelector('.tesouraimg')
     const divi = document.querySelector('.resultado')
+    const divi2 = document.querySelector('.ganhou-perdeu')
 
     if(elementoClicado === pedrai) {
-        divi.appendChild(elementoClicado) 
-        comput()     
+        divi.appendChild(elementoClicado)  
     }  
     if(elementoClicado === papeli) {
         divi.appendChild(elementoClicado)        
@@ -18,16 +19,49 @@ export default document.addEventListener('click', (e) => {
     if(elementoClicado === tesourai) {
         divi.appendChild(elementoClicado)        
     } 
-    
+
+    if (elementoClicado === pedrai) {
+        const elementos = [papeli, tesourai]
+        const elementoAleatorio = elementos[Math.floor(Math.random() * elementos.length)]
+        divi.appendChild(elementoAleatorio)
+        const p = divi2.appendChild(criaP())
+        if(elementoAleatorio === papeli) {
+            p.innerHTML += 'Você perdeu, papel cobre a pedra!'
+        } else {
+            p.innerHTML += 'Você ganhou, pedra destroi tesouras!'
+        }
+    }
+    if (elementoClicado === papeli) {
+        const elementos = [pedrai, tesourai]
+        const elementoAleatorio = elementos[Math.floor(Math.random() * elementos.length)]
+        divi.appendChild(elementoAleatorio)
+        const p = divi2.appendChild(criaP())
+        if(elementoAleatorio === tesourai) {
+            p.innerHTML += 'Você perdeu, tesoura corta papel!'
+        } else {
+            p.innerHTML += 'Você ganhou, papel cobre a pedra!'
+        }
+    }
+    if (elementoClicado === tesourai) {
+        const elementos = [papeli, pedrai]
+        const elementoAleatorio = elementos[Math.floor(Math.random() * elementos.length)]
+        divi.appendChild(elementoAleatorio)
+        const p = divi2.appendChild(criaP())
+        if(elementoAleatorio === pedrai) {
+            p.innerHTML += 'Você perdeu, pedra destroi tesoura!'
+        } else {
+            p.innerHTML += 'Você ganhou, tesoura corta papel!'
+        }
+    }
 })
 
-const rand = (max, min) => Math.floor(Math.random() * (max - min) + min)
-
-function comput () {
-    const objetos = document.querySelector('.objetos')
-    for(let i = 0; i.length; i++) {
-        i = objetos.rand(0, 3)
-    }
+function criaP() {
+    const p = document.createElement('p')
+    return p
 }
+
+
+
+
 
 
