@@ -13,5 +13,6 @@ const request = obj => {
         })
     })
 }
+console.log('hi')
 
 
