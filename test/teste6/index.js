@@ -26,7 +26,7 @@ espera('primeiro passo', randon(1000, 3000)).then(resp => {
 })
 .then(resp => {
     console.log(resp)
-    return espera(9, randon(1000, 3000))
+    return espera('passo 5', randon(1000, 3000))
 })
 .then(resp => {
     console.log(resp)
