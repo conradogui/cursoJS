@@ -1,37 +1,23 @@
-// promisses
+const pessoas = ["guilherme", "mariana", "joao", "carlos", "adilsonass", "paralelepipedo"]
+const numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 
-function espera(msg, tmp) {
-    return new Promise((resolve, reject) => {
-        if(typeof msg !== 'string') reject('não é string')
-        setTimeout(() => {
-            resolve(msg)
-        }, tmp)
-    })
-}
-function randon(min, max) {
-    return Math.floor(Math.random() * (max - min) + min)
-}
+//-----metodo filter-----
+const nomesPequenos = pessoas.filter(valor => valor.length > 7)
+// console.log(nomesPequenos)
 
-espera('primeiro passo', randon(1000, 3000)).then(resp => {
-    console.log(resp)
-    return espera('segundo passo', randon(1000, 3000))
-})
-.then(resp => {
-    console.log(resp)
-    return espera('passo 3', randon(1000, 3000))
-})
-.then(resp => {
-    console.log(resp)
-    return espera('passo 4', randon(1000, 3000))
-})
-.then(resp => {
-    console.log(resp)
-    return espera('passo 5', randon(1000, 3000))
-})
-.then(resp => {
-    console.log(resp)
-}) 
-.catch(e => {
-    console.log(e)
-})
+//numeros pares
+const numerosPares = numeros.filter(num => num % 2 === 0)
+// console.log(numerosPares)
+
+const nomeGrande = pessoas.filter(pessoa => pessoa.length > 5)
+console.log(nomeGrande)
+
+//-----metodo map------
+//dobrar valores
+const dobro = numeros.map(num => num*2)
+// console.log(dobro)
+
+const letraMaior = pessoas.map(pessoa => pessoa.toUpperCase())
+// console.log(letraMaior)
+
 
