@@ -6,13 +6,13 @@ function Produto(nome, preco, estoque) {
     Object.defineProperty(this, 'estoque', {
         enumerable: true, //mostra a chave
         value: estoque, //valor
-        writable: false, //pode alterar
+        writable: true, //pode alterar
         configurable: true //configurável -> se tiver false, eu n posso reconfigurar e nem apagar a variavel
     })
     Object.defineProperties(this, { //é basicamente igual a defineProperty, mas nessa eu posso configurar varias chaves ao mesmo tempo
         nome: {
             enumerable: true, 
-            value: estoque, 
+            value: nome, 
             writable: false, 
             configurable: true
         },
